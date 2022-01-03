@@ -18,7 +18,7 @@
  * This file contains the version information for the grade plugin.
  *
  * @package    customcertelement_grade
- * @copyright  2013 Mark Nelson <markn@moodle.com>
+ * @copyright  2021 Melanie Treitinger <melanie.treitinger@ruhr-uni-bochum.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
