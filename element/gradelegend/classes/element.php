@@ -63,7 +63,7 @@ class element extends \mod_customcert\element {
         $mform->setType('gradeformat', PARAM_INT);
         $mform->addHelpButton('gradeformat', 'gradeformat', 'customcertelement_gradelegend');
 
-        // The range elements
+        // The range elements.
         $mform->addElement('header', 'itemranges', get_string('itemranges', 'customcertelement_gradelegend'));
 
         if (empty($this->get_decoded_data()->itemranges)) {
@@ -112,7 +112,7 @@ class element extends \mod_customcert\element {
 
         $addstring = get_string('addrange', 'customcertelement_gradelegend');
         $this->get_edit_element_form()->repeat_elements($ranges, $repeats, $rangeoptions, 'repeats', 'add', 1, $addstring, true);
-        
+
         $mform->addElement('header', 'positioning', get_string('positioning', 'customcertelement_gradelegend'));
         parent::render_form_elements($mform);
 
@@ -185,7 +185,7 @@ class element extends \mod_customcert\element {
                     'rangetext' => $data->rangetext[$i],
                 ];
             }
-         }
+        }
         // Encode these variables before saving into the DB.
         return json_encode($arrtostore);
     }
@@ -203,14 +203,12 @@ class element extends \mod_customcert\element {
             return;
         }
 
-	$gradelegend = '';
+        $gradelegend = '';
         $courseid = \mod_customcert\element_helper::get_courseid($this->id);
 
         // Decode the information stored in the database.
-        $gradeinfo = json_decode($this->get_data()); 
+        $gradeinfo = json_decode($this->get_data());
         $gradeitem = $gradeinfo->gradeitem;
-        
-
         $itemranges = $gradeinfo->itemranges;
         $gradeformat = $gradeinfo->gradeformat;
 
@@ -244,13 +242,13 @@ class element extends \mod_customcert\element {
                 $grade = $grade->get_displaygrade();
             }
         }
-        
+
         $intgrade = @(int)$grade;
 
-        foreach($itemranges as $range){
-          if($intgrade >= $range->rangemin && $intgrade <= $range->rangemax){
-            $gradelegend = $range->rangetext;
-          }
+        foreach ($itemranges as $range) {
+            if($intgrade >= $range->rangemin && $intgrade <= $range->rangemax){
+                $gradelegend = $range->rangetext;
+            }
         }
 
         \mod_customcert\element_helper::render_content($pdf, $this, $gradelegend);
@@ -275,14 +273,11 @@ class element extends \mod_customcert\element {
         $gradeinfo = json_decode($this->get_data());
         $itemranges = $gradeinfo->itemranges;
 
-        foreach($itemranges as $range){
-          if(100 > $range->rangemin && 100 < $range->rangemax){
-            $gradelegend = $range->rangetext;
-          }
+        foreach ($itemranges as $range) {
+            if(100 > $range->rangemin && 100 < $range->rangemax){
+                $gradelegend = $range->rangetext;
+            }
         }
-
-
-
         return \mod_customcert\element_helper::render_html_content($this, $gradelegend);
     }
 

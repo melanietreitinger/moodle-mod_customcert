@@ -41,6 +41,6 @@ $string['positioning'] = 'Position';
 $string['rangemin'] = 'Minimum value (included)';
 $string['rangemax'] = 'Maximum value (included)';
 $string['rangetext'] = 'Text for this range';
-#$string['previewgrade'] = 'Preview grade';
+//$string['previewgrade'] = 'Preview grade';
 $string['privacy:metadata'] = 'The Grade plugin does not store any personal data.';
 $string['setdeleted'] = 'Delete';
