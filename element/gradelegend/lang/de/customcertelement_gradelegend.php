@@ -40,6 +40,6 @@ $string['positioning'] = 'Position';
 $string['rangemin'] = 'Minimalwert (einschließlich)';
 $string['rangemax'] = 'Maximalwert (einschließlich)';
 $string['rangetext'] = 'Text für diesen Bereich';
-//$string['previewgrade'] = 'Vorschau Bewertungslegende';
+// $string['previewgrade'] = 'Vorschau Bewertungslegende';
 $string['privacy:metadata'] = 'Dieses Plugin speichert keine persönlichen Daten.';
 $string['setdeleted'] = 'löschen';

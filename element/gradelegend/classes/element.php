@@ -246,7 +246,7 @@ class element extends \mod_customcert\element {
         $intgrade = @(int)$grade;
 
         foreach ($itemranges as $range) {
-            if($intgrade >= $range->rangemin && $intgrade <= $range->rangemax){
+            if ($intgrade >= $range->rangemin && $intgrade <= $range->rangemax) {
                 $gradelegend = $range->rangetext;
             }
         }
@@ -274,7 +274,7 @@ class element extends \mod_customcert\element {
         $itemranges = $gradeinfo->itemranges;
 
         foreach ($itemranges as $range) {
-            if(100 > $range->rangemin && 100 < $range->rangemax){
+            if (100 > $range->rangemin && 100 < $range->rangemax) {
                 $gradelegend = $range->rangetext;
             }
         }
