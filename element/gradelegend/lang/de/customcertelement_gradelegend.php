@@ -17,7 +17,7 @@
 /**
  * Strings for component 'customcertelement_grade', language 'en'.
  *
- * @package    customcertelement_grade
+ * @package    customcertelement_gradelegend
  * @copyright  2013 Mark Nelson <markn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
